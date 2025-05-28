@@ -5,7 +5,6 @@ set -e
 source "$(dirname "$0")/env/variables.sh"
 
 echo "Generating JNI headers and C stubs..."
-
 mkdir -p "$JAVA_OUT" "$JNI_OUT" "$HEADER_OUT"
 
 # Compile all Java files

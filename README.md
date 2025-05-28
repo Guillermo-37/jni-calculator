@@ -22,10 +22,10 @@ project-root/
 │   │   └── libcalculator.*       # Native library for your platform
 │   └── ...
 ├── scripts/                                           # Helper scripts for building, cleaning, running
-│   ├── build_and_run.sh   # Build everything and produce runnable JAR
+│   ├── build.sh           # Build everything and produce runnable JAR
 │   ├── clean.sh          # Clean build output
 │   ├── gen_jni.sh        # Generate JNI headers and C stubs
-│   └── run_jar.sh        # Run the generated JAR
+│   └── run.sh            # Run the generated JAR
 └── README.md                                         # Project documentation
 ```
 
@@ -39,9 +39,9 @@ project-root/
 ## Available Scripts
 
 - **gen_jni.sh**: Generates JNI headers and C stubs for Java classes with native methods.
-- **build_and_run.sh**: Cleans, generates JNI headers, builds native and Java code, and produces a runnable JAR.
+- **build.sh**: Cleans, generates JNI headers, builds native and Java code, and produces a runnable JAR.
 - **clean.sh**: Removes all generated files in the build directory.
-- **run_jar.sh**: Builds the project (if needed) and runs the generated JAR, linking the native library.
+- **run.sh**: Builds the project (if needed) and runs the generated JAR, linking the native library.
 
 ## Running
 
@@ -49,10 +49,10 @@ Run the following commands from a bash-compatible shell (Unix/macOS, or Windows 
 
 ```bash
 # Build the project and generate the runnable JAR
-./scripts/build_and_run.sh
+./scripts/build.sh
 
 # Run the generated JAR (after building)
-./scripts/run_jar.sh
+./scripts/run.sh
 # The native library will be loaded from the same directory as the JAR (build/output)
 
 # Clean the build output

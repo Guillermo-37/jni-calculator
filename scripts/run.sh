@@ -5,7 +5,7 @@ set -e
 source "$(dirname "$0")/env/variables.sh"
 
 # Ensure everything is built
-scripts/build_and_run.sh
+scripts/build.sh
 
 # Read Native-Library-Path from manifest
 NATIVE_LIB_PATH=$(grep '^Native-Library-Path:' "$OUTPUT_DIR/$MANIFEST" | cut -d' ' -f2-)
